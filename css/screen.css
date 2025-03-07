@@ -5,9 +5,13 @@
 }
 
 body {
+	background-image: url("media/runaway.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	font-family: Ariel, sans-serif;
 	line-height: 1.6;
-	background-color: #87CEEB;
+	background-color: #;
 	color: #333;
 	padding: 0 10px;
 }
