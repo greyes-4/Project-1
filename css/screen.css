@@ -81,7 +81,7 @@ form select,
 form button {
 	width: 100%;
 	padding: 10px;
-	margin-bottom; 20px;
+	margin-bottom: 20px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	font-size: 1rem;
@@ -100,7 +100,7 @@ form button{
 	cursor: pointer;
 }
 
-form button: hover {
+form button:hover {
 	background-color: #5c6b7d;
 }
 
@@ -138,7 +138,7 @@ form button: hover {
 
 @media (max-width: 480px) {
 	header h1 {
-		font-size: 1.8reml
+		font-size: 1.8rem;
 	}
 	
 	header p {
