@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Tech Wingz Beta</title>
     <link rel="stylesheet" href="css/screen.css">
@@ -25,7 +25,7 @@
 
         <section id="signup">
             <h2>Sign Up for Beta Testing</h2>
-            <form action="#" method="POST">
+            <form action="#" method="POST" autocomplete="on">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -52,5 +52,19 @@
     <footer>
         <p>&copy; 2025 Tech Wings. All rights reserved.</p>
     </footer>
+	
+	<script>
+        document.getElementById('betaForm').addEventListener('submit', function(event) {
+            const emailField = document.getElementById('email');
+            const emailValue = emailField.value;
+            const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+
+            if (!emailPattern.test(emailValue)) {
+                alert('Please enter a valid email address.');
+                emailField.focus();
+                event.preventDefault(); // Stops form submission
+            }
+        });
+    </script>
 </body>
 </html>
