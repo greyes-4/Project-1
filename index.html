@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Tech Wingz Beta</title>
-	<link rel="stylesheet" href="css/meyersreset-and-normalize-forms.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/screen.css">
-	<link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script>
+      function validateForm(event) {
+        const name = document.getElementById('name').value;
+        if (name.trim() === '') {
+          alert('Please enter your name.');
+          event.preventDefault();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('form').addEventListener('submit', validateForm);
+      });
+    </script>
+  </head>
+  <body>
     <header>
-        <h1>Tech Wingz</h1>
-        <p>Join our beta testing program to experience the future in personal flight!</p>
+      <h1>Tech Wingz</h1>
+      <p>Join our beta testing program to experience the future in personal flight!</p>
     </header>
 
     <main>
-        <section id="benefits">
-            <h2>Why You Should Join?</h2>
-            <ul>
-                <li>Be one of the first people to test future flight technology.</li>
-                <li>Your feedback will shape the future of the Tech Wingz.</li>
-                <li>Early access and rewards for beta testers.</li>
-            </ul>
-        </section>
+      <section id="benefits">
+        <h2>Why You Should Join?</h2>
+        <ul>
+          <li>Be one of the first people to test future flight technology.</li>
+          <li>Your feedback will shape the future of the Tech Wingz.</li>
+          <li>Early access and rewards for beta testers.</li>
+        </ul>
+      </section>
 
-        <section id="signup">
-            <h2>Sign Up for Beta Testing</h2>
-            <form action="#" method="POST" autocomplete="on">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+      <section id="signup">
+        <h2>Sign Up for Beta Testing</h2>
+        <form action="#" method="POST" autocomplete="on">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-				
-				<label for="age">Age:</label>
-				<input type="number" id="age" name="age" min="18" required>
-				
-				<label for="sex">Sex:</label>
-				<select id="sex" name="sex" required>
-					<option value="" disabled selected>Please select...</option>
-					<option value="male">Male</option>
-					<option value="female">Female</option>
-					<option value="other">Other</option>
-					<option value="prefer_not_to_say">Prefer not to say</option>
-				</select>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
 
-                <button type="submit">Fly Now</button>
-            </form>
-        </section>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="18" required>
+
+          <label for="sex">Sex:</label>
+          <select id="sex" name="sex" required>
+            <option value="" disabled selected>Please select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="prefer_not_to_say">Prefer not to say</option>
+          </select>
+
+          <button type="submit">Fly Now!</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Tech Wings. All rights reserved.</p>
+      <p>&copy; 2025 Tech Wingz. All rights reserved.</p>
     </footer>
-	
-	<script>
-        document.getElementById('betaForm').addEventListener('submit', function(event) {
-            const emailField = document.getElementById('email');
-            const emailValue = emailField.value;
-            const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-
-            if (!emailPattern.test(emailValue)) {
-                alert('Please enter a valid email address.');
-                emailField.focus();
-                event.preventDefault(); // Stops form submission
-            }
-        });
-    </script>
-</body>
+  </body>
 </html>
