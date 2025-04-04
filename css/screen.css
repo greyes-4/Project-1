@@ -128,11 +128,10 @@ form button:hover {
 		font-size: 1.1rem;
 	}
 
-	form input,
-	form select {
+	form input, form select {
 		width: 90%;
 		dispay: block;
-		margin: 0 auto 20-x;
+		margin: 0 auto 20px;
 	}
 	
 	form button {
